@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>InkTale — Online Bookstore</title>
+<meta name="description" content="InkTale is a bilingual online bookstore with an Arabic and English catalogue of 46 titles.">
+<link rel="icon" href="inktale_logo.png">
+<style>
+
+    :root {
+      --cream: #f5f0e8;
+      --brown: #1b1816;
+      --mocha: #130e0a;
+      --gold:  #c9a84c;
+      --warm:  #e8d9c0;
+      --soft:  #d4c4a8;
+      --white: #fffdf8;
+      --deep-brown: #2c1e12;
+      --olive: #8b7a5b;
+      --red: #d9534f;
+      --green: #5cb85c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--brown);
+      min-height: 100vh;
+    }
+
+    nav {
+      background: var(--brown);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .nav-logo img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      box-shadow: 0 0 10px rgba(201,168,76,0.5);
+      background: var(--brown);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--warm);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold);
+    }
+
+    .nav-user {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--warm);
+      font-size: 0.9rem;
+      cursor: default;
+      text-decoration: none;
+    }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--mocha);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: 2px solid var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--brown) 0%, var(--mocha) 100%);
+      padding: 2.5rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+.hero-top {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.hero-top img {
+  height: 110px;
+  border-radius: 50%;
+  object-fit: contain;
+  animation: glow 3s ease-in-out infinite;
+}
+
+.hero-top h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--white);
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero-top p {
+  color: var(--soft);
+  font-size: 0.95rem;
+}
+
+.hero-top span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 18px rgba(201,168,76,0.45)) brightness(1.05);
+  }
+  50% {
+    filter: drop-shadow(0 0 36px rgba(201,168,76,0.95)) brightness(1.18);
+  }
+}
+    .carousel-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .carousel-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      min-height: 500px;
+    }
+
+    .featured-card {
+      background: var(--white);
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+      overflow: hidden;
+      transition: all 0.45s ease;
+      position: relative;
+    }
+
+    .featured-card.side {
+      width: 220px;
+      opacity: 0.45;
+      transform: scale(0.85);
+      filter: blur(0.3px);
+    }
+
+    .featured-card.center {
+      width: 340px;
+      transform: scale(1);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .featured-cover {
+      height: 290px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .side .featured-cover {
+      height: 220px;
+      font-size: 4rem;
+    }
+
+    .bc-1 { background: linear-gradient(135deg, #8b5e3c, #3b2a1a); }
+    .bc-2 { background: linear-gradient(135deg, #5c7a4e, #2d3d26); }
+    .bc-3 { background: linear-gradient(135deg, #7a4e5c, #3d2630); }
+    .bc-4 { background: linear-gradient(135deg, #4e5c7a, #262d3d); }
+    .bc-5 { background: linear-gradient(135deg, #7a6e4e, #3d3526); }
+    .bc-6 { background: linear-gradient(135deg, #6f4b2b, #2b2016); }
+
+    .featured-info {
+      padding: 1.2rem 1.2rem 1.4rem;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      margin-bottom: 0.7rem;
+    }
+
+    .featured-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+    }
+
+    .side .featured-title {
+      font-size: 1.05rem;
+    }
+
+    .featured-author {
+      color: var(--mocha);
+      font-size: 0.85rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .featured-desc {
+      color: var(--mocha);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      min-height: 70px;
+    }
+
+    .side .featured-desc {
+      font-size: 0.75rem;
+      min-height: 50px;
+    }
+
+    .featured-bottom {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price-tag {
+      font-weight: 700;
+      color: var(--brown);
+      font-size: 1rem;
+    }
+
+    .read-btn {
+      background: var(--brown);
+      color: var(--gold);
+      border: none;
+      border-radius: 999px;
+      padding: 0.65rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .read-btn:hover {
+      background: var(--mocha);
+      color: white;
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 1.5rem;
+    }
+
+    .control-btn {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--brown);
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: 0.2s;
+    }
+
+    .control-btn:hover {
+      background: var(--gold);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.2rem 2rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      color: var(--brown);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--soft);
+    }
+
+    .popular-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .book-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--warm);
+      transition: all 0.25s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(59,42,26,0.12);
+      border-color: var(--gold);
+    }
+
+    .book-cover {
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .book-info {
+      padding: 1rem;
+    }
+
+    .book-info h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.35;
+    }
+
+    .book-info .author {
+      color: var(--mocha);
+      font-size: 0.78rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .book-info .desc {
+      color: var(--mocha);
+      font-size: 0.82rem;
+      line-height: 1.6;
+      min-height: 55px;
+    }
+
+    .book-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.85rem;
+      gap: 8px;
+    }
+
+    .price {
+      font-weight: 700;
+      color: var(--brown);
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 0.6rem 0.9rem;
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.8rem;
+      background: var(--brown);
+      color: var(--gold);
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: var(--mocha);
+      color: white;
+    }
+
+    footer {
+      background: var(--brown);
+      color: var(--soft);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      margin-top: 3rem;
+    }
+
+    .footer-logo {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: screen;
+      filter: drop-shadow(0 0 8px rgba(201,168,76,0.5));
+      margin-bottom: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    @media (max-width: 980px) {
+      .carousel-track {
+        gap: 0.7rem;
+      }
+
+      .featured-card.side {
+        display: none;
+      }
+
+      .featured-card.center {
+        width: min(92%, 360px);
+      }
+    }
+  
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="inktale_logo.png" alt="InkTale">
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="browse.html">Browse</a></li>
+    <li><a href="mylibrary.html">My Library</a></li>
+    <li><a href="cart.html">&#128722; Cart<span data-cart-count></span></a></li>
+    <li><a href="admin.html">Are you admin?</a></li>
+  </ul>
+
+  <div class="nav-user">
+    <div class="avatar">G</div>
+    <span>Guest</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-top">
+    <img src="inktale_logo.png" alt="InkTale">
+    <h1>Featured Stories</h1>
+    <p>Discover our <span>most loved books</span> and explore what readers enjoy most</p>
+  </div>
+
+  <div class="carousel-section">
+    <div class="carousel-track" id="carouselTrack"></div>
+    <div class="carousel-controls">
+      <button class="control-btn" onclick="prevBook()">&lsaquo;</button>
+      <button class="control-btn" onclick="nextBook()">&rsaquo;</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h2 class="section-title">Most Popular Books</h2>
+  <div class="popular-grid" id="popularGrid"></div>
+</div>
+
+<footer>
+  <img src="inktale_logo.png" alt="InkTale" class="footer-logo">
+  <p>InkTale — Where stories find you &#10024; © 2026</p>
+  <div class="footer-links">
+    <a href="tel:+966500000000">Contact: +966 50 000 0000</a>
+    <a href="location.html">Location</a>
+    <a href="admin.html">Are you admin?</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+
+let current = 0;
+
+function featured(b, cls){
+  return `<div class="featured-card ${cls}">
+      <div class="featured-cover"><img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy"></div>
+      <div class="featured-info">
+        <h3>${esc(b.title)}</h3>
+        <p class="author">${esc(b.author)}</p>
+        <p class="price">${money(b.price)}</p>
+        <a class="btn" href="product.html?id=${b.id}">View</a>
+      </div>
+    </div>`;
+}
+
+function renderCarousel(){
+  const n = BOOKS.length;
+  document.getElementById('carouselTrack').innerHTML =
+    featured(BOOKS[(current - 1 + n) % n], 'side') +
+    featured(BOOKS[current], 'center') +
+    featured(BOOKS[(current + 1) % n], 'side');
+}
+
+function nextBook(){ current = (current + 1) % BOOKS.length; renderCarousel(); }
+function prevBook(){ current = (current - 1 + BOOKS.length) % BOOKS.length; renderCarousel(); }
+
+/* the whole catalogue, exactly as the PHP page did */
+function renderPopular(){
+  document.getElementById('popularGrid').innerHTML = BOOKS.map((b, i) => `
+    <div class="book-card">
+      <div class="book-cover bc-${(i % 6) + 1}">
+        <img src="${esc(b.cover)}" alt="${esc(b.title)}" loading="lazy">
+      </div>
+      <div class="book-info">
+        <h4>${esc(b.title)}</h4>
+        <p class="author">${esc(b.author)}</p>
+        <p class="desc">${esc(b.description || 'No description available for this book.')}</p>
+        <div class="book-meta">
+          <span class="price">${money(b.price)}</span>
+          <a class="btn" href="product.html?id=${b.id}">View</a>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+loadBooks().then(() => {
+  if (!BOOKS.length){
+    document.getElementById('popularGrid').innerHTML =
+      '<p style="grid-column:1/-1;text-align:center;padding:2rem">Could not load the catalogue. If you opened this file directly, run it through a local server — see the README.</p>';
+    return;
+  }
+  renderCarousel();
+  renderPopular();
+});
+
+</script>
+</body>
+</html>

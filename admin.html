@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — InkTale</title>
+<meta name="description" content="The InkTale admin panel is part of the PHP version of the project.">
+<link rel="icon" href="inktale_logo.png">
+<style>
+
+:root {
+  --cream: #f5f0e8;
+  --brown: #1b1816;
+  --mocha: #130e0a;
+  --gold:  #c9a84c;
+  --warm:  #e8d9c0;
+  --soft:  #d4c4a8;
+  --white: #fffdf8;
+  --red: #b94a48;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--brown);
+  min-height: 100vh;
+}
+
+nav {
+  background: var(--brown);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.nav-logo img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 10px rgba(201,168,76,0.5);
+  background: var(--brown);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--warm);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--warm);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--mocha);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2px solid var(--gold);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--mocha) 100%);
+  padding: 2.6rem 2rem 2.2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+
+.hero-logo img {
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 24px rgba(201,168,76,0.7)) brightness(1.1);
+}
+
+.hero h1 {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+.hero p {
+  position: relative;
+  color: var(--soft);
+  font-size: 0.95rem;
+}
+
+.hero p span {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.2rem 2rem;
+}
+
+.login-wrap {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: 24px;
+  border: 1px solid var(--warm);
+  box-shadow: 0 12px 28px rgba(59,42,26,0.08);
+  padding: 2rem;
+}
+
+.login-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.login-card .sub {
+  text-align: center;
+  color: #6a5a4a;
+  margin-bottom: 1.5rem;
+}
+
+.notice-err {
+  background: #fdeeee;
+  color: var(--red);
+  border: 1px solid #e3bcbc;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #5f5142;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--soft);
+  background: #fcf8f1;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: var(--brown);
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 18px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: var(--brown);
+  color: var(--gold);
+  transition: 0.2s;
+  margin-top: 6px;
+}
+
+.btn:hover {
+  background: var(--mocha);
+  color: white;
+}
+
+.helper-box {
+  margin-top: 1rem;
+  background: #fbf6ee;
+  border: 1px solid var(--warm);
+  border-radius: 16px;
+  padding: 1rem;
+  line-height: 1.7;
+  font-size: 0.9rem;
+  color: #5e4f40;
+}
+
+.helper-box a {
+  color: var(--brown);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  background: var(--brown);
+  color: var(--soft);
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  margin-top: 3rem;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 8px rgba(201,168,76,0.5));
+  margin-bottom: 0.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 1.4rem 1rem;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .login-card {
+    padding: 1.4rem;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="inktale_logo.png" alt="InkTale">
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="browse.html">Browse</a></li>
+    <li><a href="mylibrary.html">My Library</a></li>
+    <li><a href="cart.html">&#128722; Cart<span data-cart-count></span></a></li>
+    <li><a href="admin.html" class="active">Are you admin?</a></li>
+  </ul>
+
+  <div class="nav-user">
+    <div class="avatar">G</div>
+    <span>Guest</span>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-logo"><img src="inktale_logo.png" alt="InkTale"></div>
+  <h1>Admin Access</h1>
+  <p>Manage the <span>catalog and dashboard</span> from one place</p>
+</section>
+
+<div class="container">
+  <div class="login-wrap">
+    <div class="login-card">
+      <h2>Admin Login</h2>
+      <p class="sub">The admin panel runs on the PHP version of InkTale</p>
+
+      <div class="notice-err" style="text-align:right">
+        This page is the static build, hosted on GitHub Pages, which cannot run PHP.
+        The admin panel — with login, add, edit and delete for the catalogue — is part of
+        the server build in the <code>/server</code> folder of the repository.
+      </div>
+
+      <h3 style="margin-top:22px">Running it locally</h3>
+      <ol style="margin:10px 20px 0;line-height:2">
+        <li>Copy the repository into your XAMPP <code>htdocs</code> folder</li>
+        <li>Import <code>server/database/inktale_simple_db.sql</code> in phpMyAdmin</li>
+        <li>Copy <code>server/config.example.php</code> to <code>server/config.php</code></li>
+        <li>Open <code>http://localhost/InkTale/server/admin_login.php</code></li>
+      </ol>
+
+      <p class="sub" style="margin-top:20px">
+        Demo account: <strong>admin</strong> / <strong>Admin@123</strong>
+      </p>
+
+      <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="https://github.com/Rabdullah97/InkTale/tree/main/server"
+           target="_blank" rel="noopener">View the admin source</a>
+        <a class="btn" href="index.html">Back to store</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="inktale_logo.png" alt="InkTale" class="footer-logo">
+  <p>InkTale — Where stories find you &#10024; © 2026</p>
+  <div class="footer-links">
+    <a href="tel:+966500000000">Contact: +966 50 000 0000</a>
+    <a href="location.html">Location</a>
+    <a href="admin.html">Are you admin?</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+
+</script>
+</body>
+</html>

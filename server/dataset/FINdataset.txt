@@ -1,0 +1,499 @@
+Title: The Hobbit
+Author: J.R.R. Tolkien
+Language: English
+Category: Fantasy
+JSON: "text/english/The_Hobbit.json"
+Book Description: Bilbo Baggins, a quiet hobbit who prefers a peaceful life, is unexpectedly drawn into an epic adventure when the wizard Gandalf and a group of dwarves recruit him to help reclaim their stolen treasure from the dragon Smaug.
+Author Bio: J.R.R. Tolkien was an English writer and professor best known for creating the fantasy world of Middle-earth. His works, including The Hobbit and The Lord of the Rings, helped shape modern fantasy literature.
+Author Image: "images/authors/J.R.R._Tolkien.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Harry Potter and the Sorcerer’s Stone
+Author: J.K. Rowling
+Language: English
+Category: Fantasy
+JSON: "text/english/Harry_Potter_and_he_Sorcerer’s_Stone.json"
+Book Description: Harry Potter, an orphan raised by unkind relatives, discovers on his eleventh birthday that he is actually a wizard. He begins studying magic at Hogwarts School and uncovers the truth about his past.
+Author Bio: J.K. Rowling is a British author famous for the Harry Potter series, one of the best-selling book series in history.
+Author Image: "images/authors/J.K._Rowling.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Hunger Games
+Author: Suzanne Collins
+Language: English
+Category: Fantasy
+JSON: "text/english/The_Hunger_Games.json"
+Book Description: Katniss Everdeen volunteers to compete in a deadly televised survival game in a dystopian society, where only one tribute is supposed to survive.
+Author Bio: Suzanne Collins is an American writer known for young adult dystopian fiction, especially The Hunger Games trilogy.
+Author Image: "images/authors/Suzanne_Collins.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Alice’s Adventures in Wonderland
+Author: Lewis Carroll
+Language: English
+Category: Fantasy
+JSON: "text/english/Alice’s_Adventures_in_Wonderland.json"
+Book Description: Alice follows a white rabbit into a magical world full of strange creatures, unusual adventures, and unforgettable characters.
+Author Bio: Lewis Carroll was an English writer and mathematician famous for his imaginative children’s stories and playful use of language.
+Author Image: "images/authors/Lewis_Carroll.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: A Game of Thrones
+Author: George R.R. Martin
+Language: English
+Category: Fantasy
+JSON: "text/english/A_Game of_Thrones.json"
+Book Description: Noble families compete for power over the Iron Throne while danger rises in the North and across the kingdom.
+Author Bio: George R.R. Martin is an American novelist famous for the epic fantasy series A Song of Ice and Fire.
+Author Image: "images/authors/George_R.R._Martin.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: قواعد جارتين
+Author: عمرو عبد الحميد
+Language: Arabic
+Category: Fantasy
+JSON: "text/arabic/قواعد_جارتين.json"
+Book Description: رواية خيالية تدور في عالم تحكمه قوانين صارمة وغريبة تتحكم في حياة الناس، وتكشف أسرارًا وصراعات تهدد استقرار هذا العالم.
+Author Bio: عمرو عبد الحميد كاتب وروائي مصري اشتهر بالروايات الخيالية مثل أرض زيكولا وقواعد جارتين.
+Author Image: "images/authors/عمرو_عبد_الحميد.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: الفيل الأزرق
+Author: أحمد مراد
+Language: Arabic
+Category: Fantasy
+JSON: "text/arabic/الفيل_الأزرق.json"
+Book Description: تدور القصة حول طبيب نفسي يكتشف أحداثًا غامضة وخارقة للطبيعة مرتبطة بأحد مرضاه، في رحلة مليئة بالغموض والإثارة.
+Author Bio: أحمد مراد كاتب وروائي وسيناريست مصري، اشتهر بروايات الإثارة والغموض التي تحولت بعضُها إلى أفلام سينمائية.
+Author Image: "images/authors/أحمد_مراد.jpg"
+----------------------------------------------------------------------------------------------------
+
+Title: خوف
+Author: أسامة المسلم
+Language: Arabic
+Category: Fantasy
+JSON: "text/arabic/خوف.json"
+Book Description: رواية فانتازية تتحدث عن عالم خفي مليء بالسحر والظواهر الغامضة، وتدور أحداثها في أجواء مشوقة ومليئة بالأسرار.
+Author Bio: أسامة المسلم كاتب سعودي معروف في أدب الفانتازيا والروايات الغامضة، وله سلسلة روايات مشهورة في العالم العربي.
+Author Image: "images/authors/أسامة_المسلم.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: ألف ليلة و ليلة
+Author: مجهول (من التراث العربي)
+Language: Arabic
+Category: Fantasy
+JSON: "text/arabic/ألف_ليلة_و_ليلة.json"
+Book Description: مجموعة قصص خيالية ترويها شهرزاد للملك شهريار، وتضم مغامرات وسحرًا وشخصيات أسطورية من التراث العربي.
+Author Bio: هذا الكتاب من التراث الشعبي العربي، وقد جُمعت قصصه عبر القرون من عدة ثقافات مثل العربية والفارسية والهندية.
+Author Image: ""
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Time Machine
+Author: H.G. Wells
+Language: English
+Category: Fantasy
+JSON: "text/english/The_Time_Machine.json"
+Book Description: A scientist invents a machine that allows him to travel through time and discover the distant future of humanity.
+Author Bio: H.G. Wells was a British writer known as one of the pioneers of science fiction. His works influenced modern fantasy and science fiction literature.
+Author Image: "images/authors/H.G._Wells.jpg"
+----------------------------------------------------------------------------------------------------
+
+Title: البؤساء
+Author: فيكتور هوغو
+Language: Arabic
+Category: Drama
+JSON: "text/arabic/البؤساء.json"
+Book Description: رواية فرنسية شهيرة تدور حول الفقر والعدالة والرحمة، وتتابع حياة جان فالجان وصراعه مع المجتمع والقانون، وتعرض أحوال فرنسا في القرن التاسع عشر.
+Author Bio: فيكتور هوغو أديب وشاعر وروائي فرنسي كبير، ويُعد من أهم أعلام الأدب الفرنسي. اشتهر بأعمال إنسانية واجتماعية بارزة مثل البؤساء وأحدب نوتردام.
+Author Image: "images/authors/فيكتور_هوغو.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Heidi
+Author: Johanna Spyri
+Language: English
+Category: Drama
+JSON: "text/english/Heidi.json"
+Book Description: A warm and touching story about the young girl Heidi, whose innocence and kindness transform the lives of those around her.
+Author Bio: Johanna Spyri was a Swiss author best known for children’s literature, and Heidi remains her most famous and beloved work.
+Author Image: "images/authors/Johanna_Spyri.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Anne of Green Gables
+Author: L. M. Montgomery
+Language: English
+Category: Drama
+JSON: "text/english/Anne_of_Green_Gables.json"
+Book Description: A novel about Anne Shirley, an imaginative orphan girl who begins a new life and leaves a deep impact on everyone she meets.
+Author Bio: L. M. Montgomery was a Canadian novelist known for writing stories that blend childhood, imagination, and human emotion.
+Author Image: "images/authors/L._M._Montgomery.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: جين إير
+Author: شارلوت برونتي
+Language: Arabic
+Category: Drama
+JSON: "text/arabic/جين_إير.json"
+Book Description: رواية كلاسيكية تتناول حياة جين إير منذ طفولتها الصعبة حتى نضجها، وتجمع بين الرومانسية والاستقلال الشخصي والصراع الأخلاقي.
+Author Bio: شارلوت برونتي روائية إنجليزية بارزة من القرن التاسع عشر، عُرفت بأسلوبها العاطفي العميق واهتمامها بقضايا المرأة والكرامة الإنسانية.
+Author Image: "images/authors/شارلوت_برونتي.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Wonder
+Author: R. J. Palacio
+Language: English
+Category: Drama
+JSON: "text/english/wonder.json"
+Book Description: A contemporary novel about Auggie, a boy born with a facial difference, and his journey through friendship, kindness, and acceptance.
+Author Bio: R. J. Palacio is an American author known for Wonder, a widely loved novel praised for its powerful human message.
+Author Image: "images/authors/R._J._Palacio.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: نساء صغيرات
+Author: لويزا ماي ألكوت
+Language: Arabic
+Category: Drama
+JSON: "text/arabic/نساء_صغيرات.json"
+Book Description: رواية تدور حول حياة أربع أخوات وعلاقتهن بالأسرة والأحلام والمسؤولية، وتُعد من أشهر الروايات الكلاسيكية الموجهة لليافعين.
+Author Bio: لويزا ماي ألكوت روائية أمريكية اشتهرت بأدب الفتيات والأسرة، وكانت كتاباتها قريبة من الحياة اليومية والقيم الإنسانية.
+Author Image: "images/authors/لويزا_ماي_ألكوت.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: الشيخ والبحر
+Author: إرنست همنغواي
+Language: Arabic
+Category: Drama
+JSON: "text/arabic/الشيخ_و_البحر.json"
+Book Description: رواية قصيرة تحكي قصة صياد عجوز يخوض معركة طويلة مع سمكة ضخمة في البحر، وتبرز الصبر والكبرياء ومعنى الكفاح.
+Author Bio: إرنست همنغواي كاتب أمريكي عالمي، عُرف بأسلوبه المكثف والبسيط، ويعد من أبرز كتاب القرن العشرين.
+Author Image: "images/authors/إرنست_همنغواي.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: قصة مدينتين
+Author: تشارلز ديكنز
+Language: Arabic
+Category: Drama
+JSON: "text/arabic/قصة_مدينتين.json"
+Book Description: رواية تاريخية تدور بين لندن وباريس في زمن الثورة الفرنسية، وتعرض التضحية والظلم والتحولات الاجتماعية الكبرى.
+Author Bio: تشارلز ديكنز روائي إنجليزي شهير، عُرف بقدرته على تصوير المجتمع ومشكلاته، وبشخصياته الأدبية الخالدة.
+Author Image: "images/authors/تشارلز_ديكنز.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Little Prince
+Author: Antoine de Saint-Exupéry
+Language: English
+Category: Drama
+JSON: "text/english/The_Little_Prince.json"
+Book Description: A poetic and philosophical story that appears simple on the surface, but explores love, friendship, loneliness, and life itself.
+Author Bio: Antoine de Saint-Exupéry was a French writer and aviator whose works combined imagination with deep human reflection.
+Author Image: "images/authors/Antoine_de_Saint-Exupéry.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Jane Eyre
+Author: Charlotte Brontë
+Language: English
+Category: Romantic
+JSON: "text/english/Jane_Eyre.json"
+Book Description: Jane Eyre, a poor orphan, becomes a governess at the mysterious Thornfield Hall, where she falls in love with the brooding Mr. Rochester while facing dark secrets and moral struggles.
+Author Bio: Charlotte Brontë was an English novelist whose work transformed the portrayal of women in literature. Jane Eyre remains one of her most celebrated novels.
+Author Image: "images/authors/Charlotte_Brontë.jpg"
+----------------------------------------------------------------------------------------------------
+
+Title: Sense and Sensibility
+Author: Jane Austen
+Language: English
+Category: Romantic
+JSON: "text/english/Sense_and_Sensibility.json"
+Book Description: Two contrasting sisters — the calm and rational Elinor and the passionate, impulsive Marianne — search for love in a society that judges women by their wealth. Both face betrayal and heartbreak in their own way. A novel about the balance between head and heart.
+Author Bio: Jane Austen (1775–1817). Sense and Sensibility was her first published novel. She explored a timeless question: does reason or emotion win when it comes to love?
+Author Image: "images/authors/Jane_Austen.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Anna Karenina
+Author: Leo Tolstoy
+Language: English
+Category: Romantic
+JSON: "text/english/Anna_Karenina.json"
+Book Description: Anna Karenina, wife of a prominent government official, falls for the charming officer Count Vronsky. She sacrifices her marriage, reputation, and even her son for love, but Russian society shows no mercy. An epic story about love, ambition, and the devastating price of following your heart.
+Author Bio: Leo Tolstoy was a Russian novelist (1828–1910). Anna Karenina and War and Peace are consistently ranked among the greatest novels ever written. He was an aristocrat who later renounced his wealth to live simply.
+Author Image: "images/authors/Leo_Tolstoy.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Great Gatsby
+Author: F. Scott Fitzgerald
+Language: English
+Category: Romantic
+JSON: "text/english/The_Great_Gatsby.json"
+Book Description: The mysterious millionaire Jay Gatsby throws lavish parties at his mansion with one goal: to win back Daisy, the woman he loves, who married someone else. A story about the American Dream, the impossibility of recapturing the past, and the illusions we build our lives upon.
+Author Bio: F. Scott Fitzgerald was an American novelist (1896–1940). He is the defining voice of the 1920s Jazz Age in America. He lived a glamorous and turbulent life that mirrored his characters.
+Author Image: "images/authors/Scott_Fitzgerald.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Love Story
+Author: Erich Segal
+Language: English
+Category: Romantic
+JSON: "text/english/Love_Story.json"
+Book Description: Oliver, from a wealthy family, and Jenny, from a poor one, meet at university and fall in love despite their differences. They marry against his family’s wishes and build a beautiful life together — until a piece of news shatters everything.
+Author Bio: Erich Segal was an American author and Harvard professor (1937–2010). Love Story became a global cultural phenomenon.
+Author Image: "images/authors/Erich_Segal.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Notebook
+Author: Nicholas Sparks
+Language: English
+Category: Romantic
+JSON: "text/english/The_Notebook.json"
+Book Description: Noah and Allie fall in love one summer in 1940, then are torn apart by social class and family disapproval. Years later, he finds her again — engaged to another man. A story about a love that defies time.
+Author Bio: Nicholas Sparks is an American novelist (born 1965). One of the most beloved romance writers of our time.
+Author Image: "images/authors/Nicholas_Sparks.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Romeo and Juliet
+Author: William Shakespeare
+Language: Arabic
+Category: Romantic
+JSON: "text/arabic/Romeo_and_Juliet.json"
+Book Description: Romeo from the Montague family and Juliet from the Capulet family — two households locked in a bitter feud in Verona. They meet at a party and fall instantly in love, but fate drives their story toward tragedy.
+Author Bio: William Shakespeare was an English playwright and poet (1564–1616). Widely regarded as the greatest writer in the English language.
+Author Image: "images/authors/William_Shakespeare.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: ذاكرة الجسد
+Author: أحلام مستغانمي
+Language: Arabic
+Category: Romantic
+JSON: "text/arabic/ذاكرة_الجسد.json"
+Book Description: خالد، الرسام الجزائري الذي فقد ذراعه في حرب الاستقلال، يقع في حب حياة، ابنة قائده السابق. رواية تمزج الحب بالذاكرة والتاريخ.
+Author Bio: أحلام مستغانمي روائية جزائرية تُعد من أكثر الكاتبات العربيات قراءة، واشتهرت بأسلوبها الشعري.
+Author Image: "images/authors/Ahlam_Mosteghanemi.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: الحب فوق هضبة الهرم
+Author: نجيب محفوظ
+Language: Arabic
+Category: Romantic
+JSON: "text/arabic/الحب_فوق_هضبة_الهرم.json"
+Book Description: A tender and bittersweet love story set in Cairo, exploring what remains of love when youth fades.
+Author Bio: نجيب محفوظ أول أديب عربي يحصل على جائزة نوبل في الأدب.
+Author Image: "images/authors/Naguib_Mahfouz.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: السمان والخريف
+Author: نجيب محفوظ
+Language: Arabic
+Category: Romantic
+JSON: "text/arabic/السمان_والخريف.json"
+Book Description: A man who has lost his place in society searches for love and meaning later in life.
+Author Bio: نجيب محفوظ أديب مصري عالمي.
+Author Image: "images/authors/Naguib_Mahfouz.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Jungle Book
+Author: Rudyard Kipling
+Language: English
+Category: Action
+JSON: "text/english/The_Jungle_Book.json"
+Book Description: The Jungle Book is a classic collection of stories set in the jungles of India. The most famous story follows Mowgli, a boy raised by wolves.
+Author Bio: Rudyard Kipling (1865–1936) was a British author and Nobel Prize winner.
+Author Image: "images/authors/Rudyard_Kipling.jpg"
+----------------------------------------------------------------------------------------------------
+
+Title: Around the World in 80 Days
+Author: Jules Verne
+Language: Arabic
+Category: Action
+JSON: "text/arabic/Around_the_World_in_80_Days.json"
+Book Description: Around the World in Eighty Days is an adventure novel that follows the story of Phileas Fogg, a wealthy English gentleman who makes a daring bet that he can travel around the world in just 80 days. Accompanied by his servant Passepartout, he faces many challenges and unexpected events during his journey.
+Author Bio: Jules Verne (1828–1905) was a French writer widely regarded as one of the fathers of science fiction. His novels combined scientific ideas with adventure and imagination.
+Author Image: "images/authors/Jules_Verne.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: 20,000 Leagues Under the Sea
+Author: Jules Verne
+Language: English
+Category: Action
+JSON: "text/english/20,000_Leagues_Under_the_Sea.json"
+Book Description: Twenty Thousand Leagues Under the Sea is a classic science fiction adventure about Professor Aronnax and his companions who are captured by Captain Nemo aboard the submarine Nautilus, exploring the deep oceans and discovering incredible underwater worlds.
+Author Bio: Jules Verne was a French writer whose works inspired generations of readers and scientists.
+Author Image: "images/authors/Jules_Verne.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Call of the Wild
+Author: Jack London
+Language: Arabic
+Category: Action
+JSON: "text/arabic/The_Call_of_the_Wild.json"
+Book Description: The Call of the Wild tells the story of Buck, a domesticated dog who is forced into the harsh wilderness of Alaska. Through survival and struggle, he discovers his instincts and strength.
+Author Bio: Jack London (1876–1916) was an American writer known for adventure novels about survival and nature.
+Author Image: "images/authors/Jack_London.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Treasure Island
+Author: Robert Louis Stevenson
+Language: Arabic
+Category: Action
+JSON: "text/arabic/Treasure_Island.json"
+Book Description: Treasure Island is a classic adventure novel that follows Jim Hawkins, who discovers a treasure map and embarks on a dangerous journey filled with pirates and betrayal.
+Author Bio: Robert Louis Stevenson was a Scottish novelist known for adventure fiction and imaginative storytelling.
+Author Image: "images/authors/Robert_Louis_Stevenson.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Count of Monte Cristo
+Author: Alexandre Dumas
+Language: English
+Category: Action
+JSON: "text/english/The_Count_of_Monte_Cristo.json"
+Book Description: The Count of Monte Cristo follows Edmond Dantès, who is falsely imprisoned and later escapes to seek revenge using wealth and intelligence.
+Author Bio: Alexandre Dumas was a famous French writer known for historical adventure novels.
+Author Image: "images/authors/Alexandre_Dumas.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Three Musketeers
+Author: Alexandre Dumas
+Language: English
+Category: Action
+JSON: "text/english/the_three_musketeers.json"
+Book Description: The Three Musketeers tells the story of d’Artagnan and his friends as they navigate political intrigue and adventure in France.
+Author Bio: Alexandre Dumas was known for his exciting storytelling and memorable characters.
+Author Image: "images/authors/Alexandre_Dumas.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Robin Hood
+Author: Howard Pyle
+Language: Arabic
+Category: Action
+JSON: "text/arabic/Robin_Hood.json"
+Book Description: Robin Hood is a legendary outlaw who fights injustice and helps the poor by taking from the rich.
+Author Bio: Howard Pyle was an American writer known for retelling legendary stories.
+Author Image: "images/authors/Howard_Pyle.png"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Prisoner of Zenda
+Author: Anthony Hope
+Language: English
+Category: Action
+JSON: "text/english/The_Prisoner_of_Zenda.json"
+Book Description: The Prisoner of Zenda is about a man who impersonates a kidnapped king to save a kingdom, facing danger and political intrigue.
+Author Bio: Anthony Hope was an English novelist known for adventure fiction.
+Author Image: "images/authors/Anthony_Hope.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: يوتوبيا
+Author: أحمد خالد توفيق
+Language: Arabic
+Category: Sci-Fi
+JSON: "text/arabic/يوتوبيا.json"
+Book Description: رواية بائسة تدور أحداثها في مصر المستقبلية حيث يعيش الأثرياء داخل مجتمع مسور، بينما يعيش الفقراء في فقر مدقع خارجه.
+Author Bio: أحمد خالد توفيق رائد أدب الخيال العلمي الحديث في العالم العربي.
+Author Image: "images/authors/لأحمد_خالد_توفيق.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: حوجن
+Author: إبراهيم عباس
+Language: Arabic
+Category: Sci-Fi
+JSON: "text/arabic/حوجن.json"
+Book Description: رواية تمزج بين الخيال العلمي والفانتازيا وتحكي قصة كائن جنّي يقع في حب إنسانة.
+Author Bio: إبراهيم عباس كاتب سعودي اشتهر بروايته حوجن.
+Author Image: "images/authors/إبراهيم_عباس.jpeg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: القادمون
+Author: أحمد خالد مصطفى
+Language: Arabic
+Category: Sci-Fi
+JSON: "text/arabic/القادمون.json"
+Book Description: رواية خيال علمي وتشويق تدور في عالم تسيطر عليه كيانات غامضة.
+Author Bio: كاتب مصري يمزج بين الفلسفة والخيال العلمي.
+Author Image: "images/authors/أحمد_خالد_مصطفى.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: فرنكشتاين
+Author: أحمد سعداوي
+Language: Arabic
+Category: Sci-Fi
+JSON: "text/arabic/فرنكشتاين.json"
+Book Description: رواية تمزج بين الرعب والخيال العلمي في سياق واقعي.
+Author Bio: كاتب عراقي فاز بجائزة البوكر العربية.
+Author Image: "images/authors/أحمد_سعداوي.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: الطابور
+Author: بسمة عبد العزيز
+Language: Arabic
+Category: Sci-Fi
+JSON: "text/arabic/الطابور.json"
+Book Description: رواية تدور حول طابور لا نهاية له أمام سلطة غامضة.
+Author Bio: كاتبة مصرية وناشطة ثقافية.
+Author Image: "images/authors/بسمة_عبدالعزيز.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: Dune
+Author: Frank Herbert
+Language: English
+Category: Sci-Fi
+JSON: "text/english/Dune.json"
+Book Description: A massive science fiction novel about politics, religion, and survival on a desert planet.
+Author Bio: Frank Herbert was an American writer known for Dune.
+Author Image: "images/authors/Frank_Herbert.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Hitchhiker's Guide to the Galaxy
+Author: Douglas Adams
+Language: English
+Category: Sci-Fi
+JSON: "text/english/The_Hitchhikers_Guide_book.json"
+Book Description: A comedic science fiction story about the last human traveling through space.
+Author Bio: Douglas Adams was an English writer known for his humor.
+Author Image: "images/authors/Douglas_Adams.jpg"
+
+----------------------------------------------------------------------------------------------------
+
+Title: The Martian
+Author: Andy Weir
+Language: English
+Category: Sci-Fi
+JSON: "text/english/The_Martian.json"
+Book Description: A survival story of an astronaut stranded on Mars who must use science to survive.
+Author Bio: Andy Weir is an American writer known for realistic science fiction.
+Author Image: "images/authors/Andy_Weir.jpg"
