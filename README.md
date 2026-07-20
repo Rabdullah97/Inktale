@@ -2,7 +2,7 @@
 
 A bilingual online bookstore. Browse an Arabic and English catalogue of 46 titles, filter by category and language, search by title or author, read about each book and its author, and build a cart.
 
-**▶ [Open the live demo](https://rabdullah97.github.io/InkTale/)**
+**▶ [Open the live demo](https://rabdullah97.github.io/Inktale/)**
 
 ---
 
