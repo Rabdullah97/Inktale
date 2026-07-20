@@ -4,23 +4,23 @@ A bilingual online bookstore. Browse an Arabic and English catalogue of 46 title
 
 **▶ [Open the live demo](https://rabdullah97.github.io/InkTale/)**
 
-<!-- TODO: add a screenshot as docs/screenshot.png, then uncomment -->
-<!-- ![InkTale catalogue](docs/screenshot.png) -->
+---
+
+## About this project
+
+A team project built for a web development course at the College of Computer Science and Information Technology, Imam Abdulrahman Bin Faisal University.
+
+The brief was a working online store with a customer-facing catalogue and an admin dashboard, backed by a relational database. The PHP and MySQL build in [`/server`](server/) is what was submitted.
+
+### My contribution — the application layer
+
+I wrote the PHP behind the store: the database access layer, the shopping cart and checkout logic, and the full admin dashboard with authentication, catalogue search, image upload, and create/edit/delete for every book. A teammate designed the MySQL schema; I built everything that runs against it.
+
+I later added the static version at the root of this repository, so the project could be opened from a link rather than installed.
 
 ---
 
-## Two versions in one repository
-
-| Folder | What it is | Runs on |
-|---|---|---|
-| **`/`** (root) | Static site — catalogue from JSON, cart in `localStorage` | Any static host, including GitHub Pages |
-| **`/server`** | The original PHP + MySQL application, with the admin panel | Apache + MySQL (XAMPP) |
-
-Both read the same catalogue: `data/books.json` is generated from the MySQL dump by `tools/export_books.py`, so the two can't drift apart.
-
----
-
-## Pages
+### Pages
 
 | Page | What it does |
 |---|---|
@@ -32,59 +32,32 @@ Both read the same catalogue: `data/books.json` is generated from the MySQL dump
 | `location.html` | Store location and contact details |
 | `admin.html` | Explains how to run the admin panel locally |
 
-### About the admin panel
+---
 
-The admin dashboard — login, add, edit and delete books, image upload — is part of the PHP build and cannot run on GitHub Pages, which serves static files only.
+## Opening it
 
-Rather than drop the link, `admin.html` keeps it in place and explains where the panel lives and how to run it. The source is in [`/server`](server/).
+The site is static, so there is nothing to install and nothing to run. Just open the link:
+
+**https://rabdullah97.github.io/InkTale/**
+
+It works in any browser, on desktop or phone. The cart is kept in `localStorage`, so it survives a refresh and is still there when you come back.
 
 ---
 
-## Running it locally
+## About the admin panel
 
-```bash
-git clone https://github.com/Rabdullah97/InkTale.git
-cd InkTale
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`.
-
-> Opening `index.html` straight from disk won't work — browsers block `fetch()` on `file://` URLs, so the catalogue can't load. Use a local server.
-
-### Regenerating the catalogue
-
-```bash
-python tools/export_books.py
-```
-
-Reads `server/database/inktale_simple_db.sql` and rewrites `data/books.json`.
+The admin dashboard cannot run on GitHub Pages, which serves static files only. Rather than drop the link, `admin.html` keeps it in place and explains where the panel lives and how to run it.
 
 ---
 
-## The PHP version
-
-Setup instructions are in [`server/README.md`](server/README.md). Demo account: `admin` / `Admin@123`.
-
-The PHP build uses prepared statements throughout, stores admin passwords as bcrypt hashes, regenerates the session id on login, and validates uploaded images by inspecting file contents rather than trusting the filename.
-
----
-
-## Why it's built this way
-
-The catalogue is 46 books that essentially never change. Running a database in production to serve fixed data means paying for hosting, uptime and maintenance in exchange for flexibility the project doesn't use.
-
-So the deployed version reads a JSON file and keeps the cart in the browser. Nothing to keep alive, and the page opens instantly for anyone who clicks the link.
-
-The PHP version stays in the repository because the admin panel, the authentication and the schema design are a real part of the work. Keeping both makes the trade-off visible rather than hiding it.
-
----
 
 ## Tech
 
 **Static** — HTML5, CSS3, vanilla JavaScript. No frameworks, no build step.
+
 **Server** — PHP 8, MySQL 8, Apache.
 
 ---
 
-Built by [Rayana Abdullah](https://github.com/Rabdullah97) · CCSIT, Imam Abdulrahman Bin Faisal University
+Team course project · CCSIT, Imam Abdulrahman Bin Faisal University
+Backend application code and static build by [Rayana Abdullah](https://github.com/Rabdullah97)
